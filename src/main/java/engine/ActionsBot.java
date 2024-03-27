@@ -28,7 +28,7 @@ public class ActionsBot {
     }
 
     @Step("Type into element")
-    public void type(By locator, CharSequence text){
+    public void type(By locator, String text){
         logger.info("Typing: "+text+", into: "+locator);
         wait.until(f -> {
             driver.findElement(locator).clear();
